@@ -1,0 +1,164 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Qreta - Expert DevOps consultation and custom software development. We build lightweight, focused solutions that help tech teams ship faster and scale reliably. Specialized in Kubernetes, continuous deployment, and AI integration for modern businesses." />
+		<meta name="keywords" content="Qreta, DevOps consulting, Kubernetes deployment, continuous deployment, custom software development, AI integration, technical consultation, lightweight solutions, business software, software engineering, DevOps automation, cloud consulting" />
+		<meta name="author" content="Qreta" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- SEO Meta Tags -->
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="bingbot" content="index, follow" />
+		<meta name="language" content="English" />
+		<meta name="geo.region" content="US" />
+		<meta name="geo.position" content="40.7128;-74.0060" />
+		<meta name="ICBM" content="Qreta - DevOps and Software Development Consulting" />
+		<meta name="category" content="technology, business" />
+		<meta name="coverage" content="Worldwide" />
+		<meta name="distribution" content="Global" />
+		<meta name="rating" content="General" />
+		<meta name="revisit-after" content="7 days" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0e7490" />
+		<meta name="theme-color" content="#1e293b" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data for SEO -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://qreta.io/#organization",
+					"name": "Qreta",
+					"url": "https://qreta.io",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://qreta.io/favicon.svg",
+						"width": 32,
+						"height": 32
+					},
+					"description": "Expert DevOps consultation and custom software development. We build lightweight, focused solutions that help tech teams ship faster and scale reliably.",
+					"foundingDate": "2024",
+					"sameAs": [
+						"https://github.com/qretaio",
+						"https://cal.com/qretaio"
+					],
+					"contactPoint": {
+						"@type": "ContactPoint",
+						"email": "qretadev@gmail.com",
+						"contactType": "consultation",
+						"availableLanguage": ["English"],
+						"hoursAvailable": "Mo-Fr 09:00-18:00 EST"
+					},
+					"areaServed": [
+						"United States",
+						"Canada",
+						"United Kingdom",
+						"European Union"
+					],
+					"knowsAbout": [
+						"DevOps",
+						"Kubernetes",
+						"Continuous Deployment",
+						"Custom Software Development",
+						"AI Integration",
+						"Technical Consultation",
+						"Cloud Architecture",
+						"Infrastructure Automation"
+					]
+				},
+				{
+					"@type": "ProfessionalService",
+					"@id": "https://qreta.io/#service",
+					"name": "DevOps Consulting Services",
+					"description": "Professional DevOps consultation and custom software development services for businesses looking to improve their technical infrastructure and development processes.",
+					"provider": {
+						"@id": "https://qreta.io/#organization"
+					},
+					"serviceType": [
+						"DevOps Consulting",
+						"Kubernetes Deployment",
+						"Continuous Deployment",
+						"Custom Software Development",
+						"AI Integration Services",
+						"Technical Architecture Consulting"
+					],
+					"areaServed": "Worldwide",
+					"hasOfferCatalog": {
+						"@type": "OfferCatalog",
+						"name": "Qreta Services",
+						"itemListElement": [
+							{
+								"@type": "Offer",
+								"itemOffered": {
+									"@type": "Service",
+									"name": "DevOps Headache Solutions",
+									"description": "Fix broken deployments, slow cycles, and 3am outages with reliable DevOps systems."
+								}
+							},
+							{
+								"@type": "Offer",
+								"itemOffered": {
+									"@type": "Service",
+									"name": "Custom Software Development",
+									"description": "Build custom software solutions that match how your business actually works."
+								}
+							},
+							{
+								"@type": "Offer",
+								"itemOffered": {
+									"@type": "Service",
+									"name": "AI Integration Services",
+									"description": "Implement AI features that solve real business problems and generate revenue."
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+		</script>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Qreta - Expert DevOps consultation and custom software development. We build lightweight, focused solutions that help tech teams ship faster and scale reliably." />
+		<meta property="og:image" content="/og-image.png" />
+		<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Qreta" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content="Qreta - Expert DevOps consultation and custom software development. We build lightweight, focused solutions that help tech teams ship faster and scale reliably." />
+		<meta property="twitter:image" content="/og-image.png" />
+		<meta property="twitter:site" content="@qretaio" />
+		<meta property="twitter:creator" content="@qretaio" />
+		<meta property="twitter:image:alt" content="Qreta - DevOps and Software Development Consulting" />
+
+		<title>{title}</title>
+	</head>
+	<body class="bg-white text-slate-900 leading-relaxed m-0 p-0 box-border scroll-smooth" style="font-family: var(--font-family-body);">
+		<slot />
+	</body>
+</html>

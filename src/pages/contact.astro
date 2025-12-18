@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<Layout title="Contact - Qreta">
+	<Nav currentPath="/contact" />
+
+	<main class="pt-16">
+		<!-- Page Header -->
+		<section class="py-24 px-6 gradient-subtle text-center">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-slate-900" style="font-family: var(--font-family-display);">Let's create something together</h1>
+				<p class="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium">
+					Ready to solve your technical challenges? We're here to help.
+				</p>
+			</div>
+		</section>
+
+		<!-- Contact Options -->
+		<section class="py-16 px-6 bg-white">
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Schedule Call -->
+					<div class="service-card text-center">
+						<div class="text-5xl mb-4">📅</div>
+						<h2 class="text-2xl font-semibold text-slate-900 mb-4">Schedule a Call</h2>
+						<p class="text-slate-600 mb-6 leading-relaxed">
+							Book a 30-minute call to discuss your project in detail
+						</p>
+						<a href="https://cal.com/qretaio/30min" target="_blank" rel="noopener" class="btn-cta">
+							Book Now
+						</a>
+					</div>
+
+					<!-- Email Contact -->
+					<div class="service-card text-center">
+						<div class="text-5xl mb-4">📧</div>
+						<h2 class="text-2xl font-semibold text-slate-900 mb-4">Email Us</h2>
+						<p class="text-slate-600 mb-6 leading-relaxed">
+							Best for detailed project discussions and formal inquiries
+						</p>
+						<a href="mailto:qretadev@gmail.com?subject=Let's create something together" class="btn-cta">
+							Email Us
+						</a>
+					</div>
+
+					<!-- GitHub Contact -->
+					<div class="service-card text-center">
+						<div class="text-5xl mb-4">💻</div>
+						<h2 class="text-2xl font-semibold text-slate-900 mb-4">GitHub</h2>
+						<p class="text-slate-600 mb-6 leading-relaxed">
+							Check out our open source projects and contribute
+						</p>
+						<a href="https://github.com/qretaio" target="_blank" rel="noopener" class="btn-cta">
+							View GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Response Time -->
+		<section class="py-16 px-6 gradient-subtle">
+			<div class="max-w-3xl mx-auto text-center">
+				<div class="text-4xl mb-6">⏰</div>
+				<h2 class="text-2xl font-semibold text-slate-900 mb-4">Quick Response</h2>
+				<p class="text-slate-600 text-lg leading-relaxed">
+					We typically respond within 24 hours. For urgent matters, please mention it in your subject line.
+				</p>
+			</div>
+		</section>
+
+		<CallToAction
+		    question="Ready to get started?"
+			tag="Whether you have a specific project in mind or just want to explore possibilities, we're here to help."
+			ctaLabel="Send us a message"
+		/>
+	</main>
+</Layout>
